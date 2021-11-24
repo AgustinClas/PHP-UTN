@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "c9e32170-bc87-4170-82f1-9fa63697e7c3",
+		"name": "ParcialAgustinClas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cargaPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sabor",
+							"value": "anchoas",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "piedra",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-10-16 a la(s) 22.27.27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php?archivo=carga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "carga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sabor",
+							"value": "muzza",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "mo",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-10-16 a la(s) 22.27.27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php?archivo=consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "consulta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipo",
+							"value": "molde",
+							"type": "text"
+						},
+						{
+							"key": "sabor",
+							"value": "muzza",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "agus@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-10-16 a la(s) 22.27.27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=venta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "venta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVenta-a",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha",
+							"value": "2021-10-19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin//index.php/?archivo=ConsultaVentas&opcionConsulta=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "ConsultaVentas"
+						},
+						{
+							"key": "opcionConsulta",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVenta-B",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fecha1",
+							"value": "2021-10-10",
+							"type": "text"
+						},
+						{
+							"key": "fecha2",
+							"value": "2021-10-20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=ConsultaVentas&opcionConsulta=b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "ConsultaVentas"
+						},
+						{
+							"key": "opcionConsulta",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVenta-C",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "agus1@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=ConsultaVentas&opcionConsulta=c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "ConsultaVentas"
+						},
+						{
+							"key": "opcionConsulta",
+							"value": "c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVenta-D",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sabor",
+							"value": "anchoa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=ConsultaVentas&opcionConsulta=d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "ConsultaVentas"
+						},
+						{
+							"key": "opcionConsulta",
+							"value": "d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarPut",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "numeroPedido",
+							"value": "8330",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "agus23@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "sabor",
+							"value": "JamonYMorrones",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "molde8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "modificar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "numPedido",
+							"value": "8140",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=borrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "borrar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "devolucion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "numeroPedido",
+							"value": "1597",
+							"type": "text"
+						},
+						{
+							"key": "causa",
+							"value": "pizza fria",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-10-18 a la(s) 20.37.27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ParcialClasAgustin/index.php/?archivo=devolver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ParcialClasAgustin",
+						"index.php",
+						""
+					],
+					"query": [
+						{
+							"key": "archivo",
+							"value": "devolver"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
