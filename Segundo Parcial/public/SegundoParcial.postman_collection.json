@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "c8b0be43-0548-451d-8950-ce22a00e3211",
+		"name": "SegundoParcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AltaUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "agus@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipo",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "agus@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AltaCriptoMoneda",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTI1ODIsImV4cCI6MTYzNzA3MjU4MiwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNAZ21haWwuY29tIiwidGlwbyI6ImFkbWluIn0sImFwcCI6IlRlc3QgSldUIn0.b0eihU65feebZzvr0MuzLTKxcXfljYbAYdZAu6h5-TE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "precio",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "agusCoin",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "argentina",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-11-15 a la(s) 18.51.45.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "precio",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "agusCoin",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidad",
+							"value": "argentina",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-11-15 a la(s) 18.51.45.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerPorId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGfgciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTM1ODgsImV4cCI6MTYzNzA3MzU4OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNDbGllbnRlQGdtYWlsLmNvbSIsInRpcG8iOiJjbGllbnRlIn0sImFwcCI6IlRlc3QgSldUIn0.j1PZi9KnYBrPkdSK6asH_Ncg9Y0pJAKHjonNakI9GBQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/traerPorId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"traerPorId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPorNacionalidad",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGfgciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTM1ODgsImV4cCI6MTYzNzA3MzU4OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNDbGllbnRlQGdtYWlsLmNvbSIsInRpcG8iOiJjbGllbnRlIn0sImFwcCI6IlRlc3QgSldUIn0.j1PZi9KnYBrPkdSK6asH_Ncg9Y0pJAKHjonNakI9GBQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/listarPorNacionalidad/argentina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"listarPorNacionalidad",
+						"argentina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VentaAlta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTM1ODgsImV4cCI6MTYzNzA3MzU4OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNDbGllbnRlQGdtYWlsLmNvbSIsInRpcG8iOiJjbGllbnRlIn0sImFwcCI6IlRlc3QgSldUIn0.j1PZi9KnYBrPkdSK6asH_Ncg9Y0pJAKHjonNakI9GBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cliente",
+							"value": "agus@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "agusCoinasd",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-11-15 a la(s) 18.51.45.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/venta/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"venta",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NacionalidadAlemana",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTY3NTgsImV4cCI6MTYzNzA3Njc1OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNAZ21haWwuY29tIiwidGlwbyI6ImFkbWluIn0sImFwcCI6IlRlc3QgSldUIn0.PWoThEbl9WVkqt1mFu1en0Nqz34MdXWJ4Lcaq5jAVVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cliente",
+							"value": "agus@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "agusCoinasd",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/Users/agustin/Desktop/Captura de Pantalla 2021-11-15 a la(s) 18.51.45.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/venta/nacionalidadAlemana",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"venta",
+						"nacionalidadAlemana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UsuariosPorNombre",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTY3NTgsImV4cCI6MTYzNzA3Njc1OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNAZ21haWwuY29tIiwidGlwbyI6ImFkbWluIn0sImFwcCI6IlRlc3QgSldUIn0.PWoThEbl9WVkqt1mFu1en0Nqz34MdXWJ4Lcaq5jAVVI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:665/public/venta/usuariosPorCripto/agusCoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"venta",
+						"usuariosPorCripto",
+						"agusCoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTY3NTgsImV4cCI6MTYzNzA3Njc1OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNAZ21haWwuY29tIiwidGlwbyI6ImFkbWluIn0sImFwcCI6IlRlc3QgSldUIn0.PWoThEbl9WVkqt1mFu1en0Nqz34MdXWJ4Lcaq5jAVVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/borrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"borrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzcwMTY3NTgsImV4cCI6MTYzNzA3Njc1OCwiYXVkIjoiZGQ2OWQ3ZDNlZjIyMGQyMzlkNmRkYmI3YTkwODFiMzUwNzQ5ODkzMCIsImRhdGEiOnsibWFpbCI6ImFndXNAZ21haWwuY29tIiwidGlwbyI6ImFkbWluIn0sImFwcCI6IlRlc3QgSldUIn0.PWoThEbl9WVkqt1mFu1en0Nqz34MdXWJ4Lcaq5jAVVI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "BocaCoin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:665/public/criptoMoneda/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"criptoMoneda",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:665/public/venta/GenerarPDF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "665",
+					"path": [
+						"public",
+						"venta",
+						"GenerarPDF"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
